@@ -1,5 +1,0 @@
-#!/usr/bin/expect -f
-
-spawn ssh localhost
-send "ping 8.8.8.8\r"
-interact

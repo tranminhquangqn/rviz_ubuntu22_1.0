@@ -1,0 +1,67 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Custom
+DesignProject.pro.user
+CMakeLists.txt.user
+
+# Visual studio code
+
+
+# Build folder
+build
+level
+install
+log
+.catkin_tools
+logs
+devel
+src/tomo_streaming/build-DesignProject-Desktop-Debug
+src/tomo_streaming/build-DesignProject-Desktop_Qt_5_9_5_MSVC2017_64bit-Debug
+# Sub folder
+VideoStreamOnline
+ImageFocusSave
+Backend
+
+# Text file
+text.txt
+readme.txt
+
+# Video files
+*.avi
+*.mp4
+
+# Package wheel file
+*.whl
+
+src/tomo_streaming/src/DesignProject.pro
