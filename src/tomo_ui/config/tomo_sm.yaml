@@ -1,0 +1,44 @@
+# Mode: defined by a '|' separated strings indicating its content
+#   Command|Alias|List
+#     Command: The actual string that is sent by the UI to convey the user interaction
+#     Alias  : Text to be displayed in the UI for a particular mode
+#     List   : A list of semicolon separated strings to be populated in a combo-box
+#              If no list is specified for a mode, it should be treated as On/Off type
+modes:
+  m0: 's|Sequence Id|Full;No Objects;No Lens;No Label;No Lens or Label;No BOM;Blister;Bottle;Label'
+  m1: 'l|Loop Mode|Off;On'
+  m2: 'v|Vel. Factor|100;95;90;85;80;75;70;65;60;55;50;40;30;20;10;5'
+  m3: 'a|Acc. Factor|100;95;90;85;80;75;70;65;60;55;50;40;30;20;10;5'
+  m4: 'i|Imaging|Disable;Enable'
+  m5: 'z|Optimization|Disable;Enable'
+
+states:
+  s0: 'Tomo Home'
+  s1: 'Blister Orientaition Correction'
+  s2: 'Prepare Lens Pickup From Blister'
+  s3: 'Prepare Lens Drop In Cuvette'
+  s4: 'Lens Inspection'
+  s5: 'Bottle Pickup'
+  s6: 'Bottle Uncapping'
+  s7: 'Prepare Lens Pickup From Cuvette'
+  s8: 'Prepare Bottle Capping'
+  s9: 'Printer Label Pick'
+  s10: 'Bottle Label Sticking'
+  s11: 'Bottle Drop on Table'
+  s12: 'Cuvette Dosing'
+  s13: 'Small Bottle Label Sticking'
+  s14: 'Small Bottle Pick'
+  s15: 'Lens Focusing'
+  s16: 'Bottle Away Blister'
+  s17: 'Bottle Away Blister Hand'
+  s18: 'Lens Drop In Cuvette Retry'
+  s19: 'Prepare Blister Drop On BOM Correction'
+  s20: 'Small Bottle Transfer To LH'
+  s21: 'Prepare Small Bottle Capping'
+  s22: 'Right arm Finger Tracking'
+  s23: 'Demo Sequence'
+  s24: 'Test Pose'
+  s25: 'Test Cuvette Pick'
+  s26: 'Head Capture Image'
+  s27: 'Test'
+  s28: 'Stretch'
