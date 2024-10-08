@@ -1,0 +1,36 @@
+#!/usr/bin/expect -f
+
+# Expect script to launch planner 'moveit' from another Xavier
+# Takes care of multicast flag and kills any remnant previous instance
+# Set HOSTID based on planner Xavier's IP address (192.168.0.***)
+# Udupa; Aug'23
+
+
+set HOSTID 2
+
+set timeout -1
+set prompt "(#|\\$) $"
+
+
+spawn ssh "192.168.0.$HOSTID"
+expect -re $prompt
+
+send "sudo ifconfig eth0 -multicast\r"
+expect -gl "password"
+send "tomo\r"
+expect -re $prompt
+
+#send "sudo -s\r"
+#expect -re $prompt
+
+send "pkill -9 move_group\r"
+expect -re $prompt
+
+send "clear && cd ~/ws_tomo && source ./install/setup.bash && ros2 launch tomo_control tomo_moveit.launch.py desc:=spc\r"
+expect -re $prompt
+
+#send "exit\r"
+#expect -re $prompt
+
+send "exit\r"
+expect eof

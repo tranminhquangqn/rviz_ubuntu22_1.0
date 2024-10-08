@@ -63,26 +63,26 @@ public:
 	// Q_INVOKABLE void viewDisplay(WidgetItem2* widgetPanel){
 	//     widgetPanel->setWidget(m_frame);
 	// }
-	// Q_INVOKABLE void initRvizApp(rviz::QtQuickOgreRenderWindow* renderWindow, QQuickItem* rvizFrame,QQuickItem* renderPanel)
-	// {
-	// 	rviz::VisualizerAppMod* widgetRviz = new rviz::VisualizerAppMod();
-	// 	widgetRviz->setApp(m_qapp);
-	// 	widgetRviz->init(m_argc, m_argv, renderWindow, source_);
-	// 	m_frame = widgetRviz->frame_;
-	// 	m_vman	= m_frame->getManager();
-	// 	connect(m_frame, SIGNAL(frameCloseSignal(bool)), this, SLOT(setConfigVisible(bool)));
-	// 	connect(m_qapp, &QApplication::focusWindowChanged, this, &RvizVM::onFocusWindowChanged);
-	// 	m_rvizFrame = rvizFrame;
-	// 	m_renderPanel = renderPanel;
+	Q_INVOKABLE void initRvizApp(rviz::QtQuickOgreRenderWindow* renderWindow, QQuickItem* rvizFrame,QQuickItem* renderPanel)
+	{
+		rviz_common::VisualizerApp* widgetRviz = new rviz_common::VisualizerApp();
+		widgetRviz->setApp(m_qapp);
+		widgetRviz->init(m_argc, m_argv, renderWindow, source_);
+		m_frame = widgetRviz->frame_;
+		m_vman	= m_frame->getManager();
+		connect(m_frame, SIGNAL(frameCloseSignal(bool)), this, SLOT(setConfigVisible(bool)));
+		connect(m_qapp, &QApplication::focusWindowChanged, this, &RvizVM::onFocusWindowChanged);
+		m_rvizFrame = rvizFrame;
+		m_renderPanel = renderPanel;
 
-	// 	// QObject::connect(m_rvizFrame, &QQuickItem::visibleChanged, [=]() {
-	// 	//     QPointF globalPosition = m_rvizFrame->mapToGlobal(QPointF(0, 0));
-	// 	// 	m_frame->move(globalPosition.x(), globalPosition.y());
-	// 	//	m_frame->resize(m_rvizFrame->width(), m_rvizFrame->height());
-	// 	// // });
-	// 	m_isInit = true;
-	// 	Q_EMIT isInitChanged();
-	// }
+		// QObject::connect(m_rvizFrame, &QQuickItem::visibleChanged, [=]() {
+		//     QPointF globalPosition = m_rvizFrame->mapToGlobal(QPointF(0, 0));
+		// 	m_frame->move(globalPosition.x(), globalPosition.y());
+		//	m_frame->resize(m_rvizFrame->width(), m_rvizFrame->height());
+		// // });
+		m_isInit = true;
+		Q_EMIT isInitChanged();
+	}
 	// Q_INVOKABLE void setRvizGeometry()
 	// {
 	// 	if(!m_isInit) {

@@ -7,6 +7,8 @@ import QtQuick.Layouts 1.3
 
 //end
 
+import WidgetItem 1.0
+
 ApplicationWindow {
     id: mainWindow
 
@@ -23,6 +25,16 @@ ApplicationWindow {
     visible: true
 
     color: "#303030"
+
+    WidgetItem{
+        width:500
+        height:500
+        // Rectangle{
+        //     anchors.fill:parent
+        //     color:"red"
+        // }
+        
+    }
 
 
 

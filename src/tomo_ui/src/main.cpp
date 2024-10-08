@@ -8,13 +8,16 @@
 #include "rclcpp/rclcpp.hpp"
 // #include "rviz_common/logging.hpp"
 
+#include "ViewModel/TomoVM/rviz_loader.h"
+#include "ViewModel/TomoVM/widgetitem2.h"
+
 int main(int argc, char **argv)
 {
       qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
   QApplication qapp( argc, argv );
 
 //   qmlRegisterType<QtQuickOgreRenderWindow>("ros.rviz", 1, 0, "RenderWindow");
-  // qmlRegisterType<WidgetItem2>("WidgetItem", 1, 0, "WidgetItem");
+  qmlRegisterType<WidgetItem2>("WidgetItem", 1, 0, "WidgetItem");
 
   QQmlApplicationEngine engine;
   

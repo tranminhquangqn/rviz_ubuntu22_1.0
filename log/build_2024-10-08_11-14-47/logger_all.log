@@ -1,0 +1,412 @@
+[0.088s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.088s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x73d29cc41db0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x73d29cc41900>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x73d29cc41900>>, mixin_verb=('build',))
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.222s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.222s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/quang/Downloads/rviz_ubuntu22_1.0'
+[0.222s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.231s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.232s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extensions ['colcon_pkg']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extension 'colcon_pkg'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extensions ['colcon_meta']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extension 'colcon_meta'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extensions ['ros']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extension 'ros'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extensions ['cmake', 'python']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extension 'cmake'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extension 'python'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extensions ['python_setup_py']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz) by extension 'python_setup_py'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/Ignored) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/Ignored) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/Ignored) ignored
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extensions ['ignore', 'ignore_ament_install']
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extension 'ignore'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extension 'ignore_ament_install'
+[0.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extensions ['colcon_pkg']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extension 'colcon_pkg'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extensions ['colcon_meta']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extension 'colcon_meta'
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extensions ['ros']
+[0.234s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz2) by extension 'ros'
+[0.236s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tomo_rviz/rviz2' with type 'ros.ament_cmake' and name 'rviz2'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extensions ['ros']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_common) by extension 'ros'
+[0.238s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tomo_rviz/rviz_common' with type 'ros.ament_cmake' and name 'rviz_common'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_default_plugins) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_default_plugins) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_default_plugins) ignored
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_rviz/rviz_rendering) by extension 'ros'
+[0.239s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tomo_rviz/rviz_rendering' with type 'ros.ament_cmake' and name 'rviz_rendering'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extensions ['colcon_pkg']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extension 'colcon_pkg'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extensions ['colcon_meta']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extension 'colcon_meta'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(src/tomo_ui) by extension 'ros'
+[0.240s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tomo_ui' with type 'ros.ament_cmake' and name 'tomo_ui'
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.263s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.264s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/quang/Downloads/rviz_ubuntu22_1.0/install
+[0.266s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 272 installed packages in /opt/ros/humble
+[0.267s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.296s] WARNING:colcon.colcon_core.package_selection:Some selected packages are already built in one or more underlay workspaces:
+	'rviz_rendering' is in: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering, /opt/ros/humble
+	'rviz2' is in: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2, /opt/ros/humble
+	'rviz_common' is in: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common, /opt/ros/humble
+If a package in a merged underlay workspace is overridden and it installs headers, then all packages in the overlay must sort their include directories by workspace order. Failure to do so may result in build failures or undefined behavior at run time.
+If the overridden package is used by another package in any underlay, then the overriding package in the overlay must be API and ABI compatible or undefined behavior at run time may occur.
+
+If you understand the risks and want to override a package anyways, add the following to the command line:
+	--allow-overriding rviz2 rviz_common rviz_rendering
+
+This may be promoted to an error in a future release of colcon-override-check.
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'cmake_target' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'cmake_clean_cache' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'cmake_clean_first' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'cmake_force_configure' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'ament_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'catkin_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'rviz_rendering' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.297s] DEBUG:colcon.colcon_core.verb:Building package 'rviz_rendering' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering', 'merge_install': False, 'path': '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz_rendering', 'symlink_install': False, 'test_result_base': None}
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'cmake_target' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'cmake_clean_cache' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'cmake_clean_first' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'cmake_force_configure' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'ament_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'catkin_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'tomo_ui' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.297s] DEBUG:colcon.colcon_core.verb:Building package 'tomo_ui' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui', 'merge_install': False, 'path': '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_ui', 'symlink_install': False, 'test_result_base': None}
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'cmake_target' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'cmake_clean_cache' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'cmake_clean_first' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'cmake_force_configure' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'ament_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'catkin_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz_common' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.298s] DEBUG:colcon.colcon_core.verb:Building package 'rviz_common' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common', 'merge_install': False, 'path': '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz_common', 'symlink_install': False, 'test_result_base': None}
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'cmake_target' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'cmake_clean_first' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'cmake_force_configure' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'ament_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'rviz2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.298s] DEBUG:colcon.colcon_core.verb:Building package 'rviz2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2', 'merge_install': False, 'path': '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz2', 'symlink_install': False, 'test_result_base': None}
+[0.298s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.299s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.300s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz_rendering' with build type 'ament_cmake'
+[0.300s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz_rendering'
+[0.301s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.301s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.301s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.304s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_ui' with build type 'ament_cmake'
+[0.304s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_ui'
+[0.304s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.305s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering -- -j12 -l12
+[0.316s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui -- -j12 -l12
+[0.451s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering -- -j12 -l12
+[0.605s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering
+[0.621s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz_rendering)
+[0.621s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering
+[0.623s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering' for CMake module files
+[0.624s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering' for CMake config files
+[0.624s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_rendering', 'cmake_prefix_path')
+[0.624s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/cmake_prefix_path.ps1'
+[0.625s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/cmake_prefix_path.dsv'
+[0.626s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/cmake_prefix_path.sh'
+[0.626s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib'
+[0.627s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_rendering', 'ld_library_path_lib')
+[0.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/ld_library_path_lib.ps1'
+[0.627s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/ld_library_path_lib.dsv'
+[0.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/ld_library_path_lib.sh'
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/bin'
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib/pkgconfig/rviz_rendering.pc'
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib/python3.10/site-packages'
+[0.628s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/bin'
+[0.629s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.ps1'
+[0.630s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.dsv'
+[0.630s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.sh'
+[0.631s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.bash'
+[0.632s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.zsh'
+[0.632s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/colcon-core/packages/rviz_rendering)
+[0.777s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz_rendering)
+[0.777s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering' for CMake module files
+[0.778s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering' for CMake config files
+[0.778s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_rendering', 'cmake_prefix_path')
+[0.778s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/cmake_prefix_path.ps1'
+[0.779s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/cmake_prefix_path.dsv'
+[0.779s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/cmake_prefix_path.sh'
+[0.779s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib'
+[0.779s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_rendering', 'ld_library_path_lib')
+[0.780s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/ld_library_path_lib.ps1'
+[0.780s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/ld_library_path_lib.dsv'
+[0.780s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/hook/ld_library_path_lib.sh'
+[0.780s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/bin'
+[0.780s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib/pkgconfig/rviz_rendering.pc'
+[0.781s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib/python3.10/site-packages'
+[0.781s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/bin'
+[0.781s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.ps1'
+[0.782s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.dsv'
+[0.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.sh'
+[0.782s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.bash'
+[0.783s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/rviz_rendering/package.zsh'
+[0.783s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/share/colcon-core/packages/rviz_rendering)
+[0.783s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz_common' with build type 'ament_cmake'
+[0.783s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz_common'
+[0.783s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.784s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common': CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common -- -j12 -l12
+[1.041s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common' returned '0': CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common -- -j12 -l12
+[1.292s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui -- -j12 -l12
+[1.324s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui
+[1.339s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tomo_ui)
+[1.340s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui' for CMake module files
+[1.340s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/tomo_ui
+[1.340s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui' for CMake config files
+[1.341s] Level 1:colcon.colcon_core.shell:create_environment_hook('tomo_ui', 'cmake_prefix_path')
+[1.341s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/cmake_prefix_path.ps1'
+[1.341s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/cmake_prefix_path.dsv'
+[1.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/cmake_prefix_path.sh'
+[1.342s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib'
+[1.342s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/bin'
+[1.342s] Level 1:colcon.colcon_core.shell:create_environment_hook('tomo_ui', 'path')
+[1.342s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/path.ps1'
+[1.343s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/path.dsv'
+[1.343s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/path.sh'
+[1.343s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib/pkgconfig/tomo_ui.pc'
+[1.343s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib/python3.10/site-packages'
+[1.344s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/bin'
+[1.344s] Level 1:colcon.colcon_core.shell:create_environment_hook('tomo_ui', 'pythonscriptspath')
+[1.344s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/pythonscriptspath.ps1'
+[1.344s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/pythonscriptspath.dsv'
+[1.345s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/pythonscriptspath.sh'
+[1.345s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.ps1'
+[1.346s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.dsv'
+[1.346s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.sh'
+[1.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.bash'
+[1.347s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.zsh'
+[1.347s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/colcon-core/packages/tomo_ui)
+[1.381s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tomo_ui)
+[1.381s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui' for CMake module files
+[1.381s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui' for CMake config files
+[1.382s] Level 1:colcon.colcon_core.shell:create_environment_hook('tomo_ui', 'cmake_prefix_path')
+[1.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/cmake_prefix_path.ps1'
+[1.382s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/cmake_prefix_path.dsv'
+[1.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/cmake_prefix_path.sh'
+[1.383s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib'
+[1.383s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/bin'
+[1.383s] Level 1:colcon.colcon_core.shell:create_environment_hook('tomo_ui', 'path')
+[1.383s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/path.ps1'
+[1.384s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/path.dsv'
+[1.384s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/path.sh'
+[1.384s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib/pkgconfig/tomo_ui.pc'
+[1.384s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib/python3.10/site-packages'
+[1.384s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/bin'
+[1.385s] Level 1:colcon.colcon_core.shell:create_environment_hook('tomo_ui', 'pythonscriptspath')
+[1.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/pythonscriptspath.ps1'
+[1.385s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/pythonscriptspath.dsv'
+[1.385s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/hook/pythonscriptspath.sh'
+[1.386s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.ps1'
+[1.386s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.dsv'
+[1.387s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.sh'
+[1.387s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.bash'
+[1.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.zsh'
+[1.388s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/colcon-core/packages/tomo_ui)
+[1.480s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common': CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common
+[1.493s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz_common)
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common' for CMake module files
+[1.498s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common' for CMake config files
+[1.502s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common' returned '0': CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_common
+[1.502s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_common', 'cmake_prefix_path')
+[1.502s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/cmake_prefix_path.ps1'
+[1.503s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/cmake_prefix_path.dsv'
+[1.503s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/cmake_prefix_path.sh'
+[1.504s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib'
+[1.504s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_common', 'ld_library_path_lib')
+[1.504s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/ld_library_path_lib.ps1'
+[1.504s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/ld_library_path_lib.dsv'
+[1.505s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/ld_library_path_lib.sh'
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/bin'
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib/pkgconfig/rviz_common.pc'
+[1.505s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib/python3.10/site-packages'
+[1.506s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/bin'
+[1.506s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.ps1'
+[1.506s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.dsv'
+[1.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.sh'
+[1.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.bash'
+[1.507s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.zsh'
+[1.507s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/colcon-core/packages/rviz_common)
+[1.941s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz_common)
+[1.941s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common' for CMake module files
+[1.942s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common' for CMake config files
+[1.942s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_common', 'cmake_prefix_path')
+[1.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/cmake_prefix_path.ps1'
+[1.942s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/cmake_prefix_path.dsv'
+[1.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/cmake_prefix_path.sh'
+[1.943s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib'
+[1.943s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz_common', 'ld_library_path_lib')
+[1.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/ld_library_path_lib.ps1'
+[1.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/ld_library_path_lib.dsv'
+[1.944s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/hook/ld_library_path_lib.sh'
+[1.944s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/bin'
+[1.944s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib/pkgconfig/rviz_common.pc'
+[1.945s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib/python3.10/site-packages'
+[1.945s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/bin'
+[1.945s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.ps1'
+[1.945s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.dsv'
+[1.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.sh'
+[1.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.bash'
+[1.947s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/package.zsh'
+[1.947s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/colcon-core/packages/rviz_common)
+[1.947s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz2' with build type 'ament_cmake'
+[1.947s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz2'
+[1.948s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.948s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2': CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2 -- -j12 -l12
+[2.020s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2' returned '0': CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2 -- -j12 -l12
+[2.047s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2': CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2
+[2.056s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz2)
+[2.056s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2' for CMake module files
+[2.057s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2' returned '0': CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2
+[2.057s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2' for CMake config files
+[2.057s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz2', 'cmake_prefix_path')
+[2.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/cmake_prefix_path.ps1'
+[2.058s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/cmake_prefix_path.dsv'
+[2.058s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/cmake_prefix_path.sh'
+[2.059s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/lib'
+[2.059s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/bin'
+[2.059s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz2', 'path')
+[2.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/path.ps1'
+[2.059s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/path.dsv'
+[2.059s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/path.sh'
+[2.060s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/lib/pkgconfig/rviz2.pc'
+[2.060s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/lib/python3.10/site-packages'
+[2.060s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/bin'
+[2.060s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz2', 'pythonscriptspath')
+[2.060s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/pythonscriptspath.ps1'
+[2.061s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/pythonscriptspath.dsv'
+[2.061s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/pythonscriptspath.sh'
+[2.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.ps1'
+[2.062s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.dsv'
+[2.062s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.sh'
+[2.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.bash'
+[2.063s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.zsh'
+[2.063s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/colcon-core/packages/rviz2)
+[2.089s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(rviz2)
+[2.089s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2' for CMake module files
+[2.090s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2' for CMake config files
+[2.090s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz2', 'cmake_prefix_path')
+[2.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/cmake_prefix_path.ps1'
+[2.090s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/cmake_prefix_path.dsv'
+[2.091s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/cmake_prefix_path.sh'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/lib'
+[2.091s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/bin'
+[2.091s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz2', 'path')
+[2.091s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/path.ps1'
+[2.092s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/path.dsv'
+[2.092s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/path.sh'
+[2.092s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/lib/pkgconfig/rviz2.pc'
+[2.093s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/lib/python3.10/site-packages'
+[2.093s] Level 1:colcon.colcon_core.environment:checking '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/bin'
+[2.093s] Level 1:colcon.colcon_core.shell:create_environment_hook('rviz2', 'pythonscriptspath')
+[2.093s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/pythonscriptspath.ps1'
+[2.093s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/pythonscriptspath.dsv'
+[2.094s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/hook/pythonscriptspath.sh'
+[2.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.ps1'
+[2.095s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.dsv'
+[2.095s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.sh'
+[2.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.bash'
+[2.096s] INFO:colcon.colcon_core.shell:Creating package script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.zsh'
+[2.096s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/colcon-core/packages/rviz2)
+[2.096s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.097s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.097s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.097s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.101s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.101s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.101s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.110s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.111s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/local_setup.ps1'
+[2.112s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/quang/Downloads/rviz_ubuntu22_1.0/install/_local_setup_util_ps1.py'
+[2.113s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/setup.ps1'
+[2.114s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/local_setup.sh'
+[2.114s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/quang/Downloads/rviz_ubuntu22_1.0/install/_local_setup_util_sh.py'
+[2.114s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/setup.sh'
+[2.115s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/local_setup.bash'
+[2.116s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/setup.bash'
+[2.117s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/local_setup.zsh'
+[2.118s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/quang/Downloads/rviz_ubuntu22_1.0/install/setup.zsh'

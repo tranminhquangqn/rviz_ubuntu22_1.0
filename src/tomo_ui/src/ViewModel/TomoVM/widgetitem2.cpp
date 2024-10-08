@@ -22,6 +22,8 @@ WidgetItem2::~WidgetItem2(){
 
 void WidgetItem2::setWidget(QWidget *widget)
 {
+
+
     m_widget = widget;
     if (m_widget)
     {

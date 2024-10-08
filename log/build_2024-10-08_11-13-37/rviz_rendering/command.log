@@ -1,0 +1,4 @@
+Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering -- -j12 -l12
+Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering -- -j12 -l12
+Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering
+Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz_rendering

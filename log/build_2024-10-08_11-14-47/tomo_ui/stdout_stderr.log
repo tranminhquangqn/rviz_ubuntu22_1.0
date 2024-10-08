@@ -1,0 +1,54 @@
+[ 14%] [34m[1mAutomatic MOC and UIC for target tomo_ui[0m
+[ 14%] Built target tomo_ui_autogen
+[ 28%] [34m[1mAutomatic RCC for src/qml.qrc[0m
+[35m[1mConsolidate compiler generated dependencies of target tomo_ui[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/tomo_ui.dir/tomo_ui_autogen/UVLADIE3JM/qrc_qml.cpp.o[0m
+[ 57%] [32m[1mLinking CXX executable tomo_ui[0m
+[100%] Built target tomo_ui
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/bin/tomo_ui
+-- Set runtime path of "/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/bin/tomo_ui" to "/opt/ros/humble/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu"
+-- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib/tomo_ui/tomo_ui
+-- Set runtime path of "/home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib/tomo_ui/tomo_ui" to "/opt/ros/humble/lib:/usr/local/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu"
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch/test_call_rviz_launch.py
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch/tomo_ui.launch.py
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch/test_call_rviz_launch.py
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch/tomo_ui.launch.py
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/ssh
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/ssh/4_Sequence_5.exp
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/ssh/1_PMAS_0.exp
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/ssh/10_TestScript_10.exp
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/ssh/2_Control_2.exp
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/ssh/3_Planner_3.exp
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/tomo_sm.yaml
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/kinematics.yaml
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/tomo_ui.yaml
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/config/tomospc_moveit.rviz
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/lib/tomo_ui/tomo_ui
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch/test_call_rviz_launch.py
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/launch/tomo_ui.launch.py
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/bin/tomo_ui
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/environment/library_path.sh
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/environment/library_path.dsv
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/ament_index/resource_index/package_run_dependencies/tomo_ui
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/ament_index/resource_index/parent_prefix_path/tomo_ui
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/environment/ament_prefix_path.sh
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/environment/path.sh
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/environment/path.dsv
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/local_setup.bash
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/local_setup.sh
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/local_setup.zsh
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/local_setup.dsv
+-- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.dsv
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/ament_index/resource_index/packages/tomo_ui
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/cmake/tomo_uiConfig.cmake
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/cmake/tomo_uiConfig-version.cmake
+-- Up-to-date: /home/quang/Downloads/rviz_ubuntu22_1.0/install/tomo_ui/share/tomo_ui/package.xml

@@ -1,0 +1,113 @@
+[0.008s] Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2': AMENT_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake /home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz2 -DCMAKE_INSTALL_PREFIX=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2
+[0.054s] -- The C compiler identification is GNU 11.4.0
+[0.101s] -- The CXX compiler identification is GNU 11.4.0
+[0.107s] -- Detecting C compiler ABI info
+[0.166s] -- Detecting C compiler ABI info - done
+[0.172s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.172s] -- Detecting C compile features
+[0.173s] -- Detecting C compile features - done
+[0.175s] -- Detecting CXX compiler ABI info
+[0.245s] -- Detecting CXX compiler ABI info - done
+[0.252s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.253s] -- Detecting CXX compile features
+[0.253s] -- Detecting CXX compile features - done
+[0.255s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.377s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.446s] -- Found rviz_common: 11.2.13 (/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/share/rviz_common/cmake)
+[0.462s] -- Setting assimp_DIR to: '/opt/ros/humble/share/rviz_assimp_vendor/cmake/../../../opt/rviz_assimp_vendor/lib/cmake/assimp-4.1'
+[0.466s] -- Setting OGRE_DIR to: '/opt/ros/humble/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[0.467s] -- Found OGRE
+[0.468s] --   static     : OFF
+[0.468s] --   components : HLMS;MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[0.468s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[0.468s] --   media      : /opt/ros/humble/opt/rviz_ogre_vendor/share/OGRE/Media
+[0.468s] -- OGRE_LIBRARIES: OgreHLMS;OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[0.468s] -- OGRE_LIBRARY_DIRS: /opt/ros/humble/opt/rviz_ogre_vendor/lib
+[0.468s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[0.468s] -- OGRE_PLUGIN_DIR: /opt/ros/humble/opt/rviz_ogre_vendor/lib/OGRE
+[0.468s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[0.468s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[0.468s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[0.468s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/humble/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[0.471s] -- Could not find freeimage library
+[0.487s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[0.490s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[0.561s] -- Found X11: /usr/include   
+[0.561s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[0.624s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[0.624s] -- Looking for gethostbyname
+[0.683s] -- Looking for gethostbyname - found
+[0.683s] -- Looking for connect
+[0.742s] -- Looking for connect - found
+[0.742s] -- Looking for remove
+[0.800s] -- Looking for remove - found
+[0.800s] -- Looking for shmat
+[0.859s] -- Looking for shmat - found
+[0.860s] -- Looking for IceConnectionNumber in ICE
+[0.919s] -- Looking for IceConnectionNumber in ICE - found
+[0.986s] -- library: /usr/lib/x86_64-linux-gnu/libcurl.so
+[1.014s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.018s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.025s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.036s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.051s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.143s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.145s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.168s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.210s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.213s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.222s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.225s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.232s] -- Found TinyXML2 via Config file: TinyXML2_DIR-NOTFOUND
+[1.240s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.247s] -- Looking for pthread.h
+[1.310s] -- Looking for pthread.h - found
+[1.310s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.373s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.374s] -- Found Threads: TRUE  
+[1.441s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.441s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.542s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.611s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.611s] -- Configured cppcheck include dirs: 
+[1.611s] -- Configured cppcheck exclude dirs and/or files: 
+[1.612s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.612s] -- Configured cpplint exclude dirs and/or files: 
+[1.613s] -- Added test 'lint_cmake' to check CMake code style
+[1.614s] -- Added test 'uncrustify' to check C / C++ code style
+[1.614s] -- Configured uncrustify additional arguments: 
+[1.615s] -- Added test 'xmllint' to check XML markup files
+[1.616s] -- Configuring done
+[1.638s] -- Generating done
+[1.640s] -- Build files have been written to: /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2
+[1.650s] Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2' returned '0': AMENT_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake /home/quang/Downloads/rviz_ubuntu22_1.0/src/tomo_rviz/rviz2 -DCMAKE_INSTALL_PREFIX=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2
+[1.651s] Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2': AMENT_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2 -- -j12 -l12
+[1.694s] [ 50%] [32mBuilding CXX object test/tools/CMakeFiles/send_lots_of_points_node.dir/send_lots_of_points_node.cpp.o[0m
+[1.694s] [ 50%] [32mBuilding CXX object CMakeFiles/rviz2.dir/src/main.cpp.o[0m
+[5.576s] [ 75%] [32m[1mLinking CXX executable send_lots_of_points_node[0m
+[5.669s] [100%] [32m[1mLinking CXX executable rviz2[0m
+[5.756s] [100%] Built target send_lots_of_points_node
+[6.796s] [100%] Built target rviz2
+[6.806s] Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2' returned '0': AMENT_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --build /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2 -- -j12 -l12
+[6.830s] Invoking command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2': AMENT_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2
+[6.836s] -- Install configuration: ""
+[6.836s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/bin/rviz2
+[6.836s] -- Set runtime path of "/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/bin/rviz2" to "/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/opt/ros/humble/lib:/opt/ros/humble/lib/x86_64-linux-gnu"
+[6.837s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/lib/rviz2/rviz2
+[6.837s] -- Set runtime path of "/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/lib/rviz2/rviz2" to "/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/opt/ros/humble/lib:/opt/ros/humble/lib/x86_64-linux-gnu"
+[6.837s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/ament_index/resource_index/package_run_dependencies/rviz2
+[6.837s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/ament_index/resource_index/parent_prefix_path/rviz2
+[6.837s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/environment/ament_prefix_path.sh
+[6.837s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/environment/ament_prefix_path.dsv
+[6.838s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/environment/path.sh
+[6.838s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/environment/path.dsv
+[6.838s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/local_setup.bash
+[6.838s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/local_setup.sh
+[6.838s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/local_setup.zsh
+[6.838s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/local_setup.dsv
+[6.838s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.dsv
+[6.838s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/ament_index/resource_index/packages/rviz2
+[6.839s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/cmake/rviz2Config.cmake
+[6.839s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/cmake/rviz2Config-version.cmake
+[6.839s] -- Installing: /home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz2/share/rviz2/package.xml
+[6.841s] Invoked command in '/home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2' returned '0': AMENT_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering:/opt/ros/humble LD_LIBRARY_PATH=/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_common/lib:/home/quang/Downloads/rviz_ubuntu22_1.0/install/rviz_rendering/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/quang/Libraries/OpenCV_4.7.0/opencv/build/lib /usr/bin/cmake --install /home/quang/Downloads/rviz_ubuntu22_1.0/build/rviz2
