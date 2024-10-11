@@ -72,7 +72,7 @@ class WidgetGeometryChangeDetector;
 
 /// The main rviz window.
 /**
- * VisualizationFrame is a QMainWindow, which means it has a center area and a
+ * VisualizationFrameMod is a QMainWindow, which means it has a center area and a
  * bunch of dock areas around it.
  * The central widget here is a RenderPanel, and around it (by default) are the
  * DisplaysPanel, ViewsPanel, TimePanel, SelectionPanel, and
@@ -80,14 +80,14 @@ class WidgetGeometryChangeDetector;
  * At the top is a toolbar with Tools like "Move Camera", "Select", etc.
  * There is also a menu bar with file/open, etc.
  */
-class VisualizationFrame : public QMainWindow, public WindowManagerInterface
+class VisualizationFrameMod : public QMainWindow, public WindowManagerInterface
 {
   Q_OBJECT
 
 public:
-  explicit VisualizationFrame(
+  explicit VisualizationFrameMod(
     ros_integration::RosNodeAbstractionIface::WeakPtr rviz_ros_node, QWidget * parent = nullptr);
-  ~VisualizationFrame() override;
+  ~VisualizationFrameMod() override;
 
   rviz_rendering::RenderWindow * getRenderWindow();
 
@@ -118,7 +118,7 @@ public:
   void
   setSplashPath(const QString & splash_path);
 
-  /// Initialize the VisualizationFrame and create the VisualizationManager.
+  /// Initialize the VisualizationFrameMod and create the VisualizationManager.
   /**
    * This function must be called before load(), save(), getManager(),
    * or addPanelByName(), because it creates the VisualizationManager
@@ -246,6 +246,7 @@ public Q_SLOTS:
   setStatus(const QString & message) override;
 
 Q_SIGNALS:
+  void frameCloseSignal(bool value);
   /// Emitted during file-loading and initialization to indicate progress.
   void
   statusUpdate(const QString & message);

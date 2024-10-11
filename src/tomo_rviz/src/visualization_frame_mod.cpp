@@ -29,7 +29,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "rviz_common/visualization_frame.hpp"
+#include "tomo_rviz/visualization_frame_mod.hpp"
 
 #include <exception>
 #include <fstream>
@@ -99,7 +99,7 @@
 namespace rviz_common
 {
 
-VisualizationFrame::VisualizationFrame(
+VisualizationFrameMod::VisualizationFrameMod(
   ros_integration::RosNodeAbstractionIface::WeakPtr rviz_ros_node, QWidget * parent)
 : QMainWindow(parent),
   app_(nullptr),
@@ -123,7 +123,7 @@ VisualizationFrame::VisualizationFrame(
   toolbar_visible_(true),
   rviz_ros_node_(rviz_ros_node)
 {
-  setObjectName("VisualizationFrame");
+  setObjectName("VisualizationFrameMod");
   installEventFilter(geom_change_detector_);
   connect(geom_change_detector_, SIGNAL(changed()), this, SLOT(setDisplayConfigModified()));
 
@@ -155,7 +155,7 @@ VisualizationFrame::VisualizationFrame(
   setWindowTitle("RViz[*]");
 }
 
-VisualizationFrame::~VisualizationFrame()
+VisualizationFrameMod::~VisualizationFrameMod()
 {
   delete manager_;
   delete render_panel_;
@@ -167,22 +167,22 @@ VisualizationFrame::~VisualizationFrame()
   delete panel_factory_;
 }
 
-rviz_rendering::RenderWindow * VisualizationFrame::getRenderWindow()
+rviz_rendering::RenderWindow * VisualizationFrameMod::getRenderWindow()
 {
   return render_panel_->getRenderWindow();
 }
 
-void VisualizationFrame::setApp(QApplication * app)
+void VisualizationFrameMod::setApp(QApplication * app)
 {
   app_ = app;
 }
 
-void VisualizationFrame::setStatus(const QString & message)
+void VisualizationFrameMod::setStatus(const QString & message)
 {
   Q_EMIT statusUpdate(message);
 }
 
-void VisualizationFrame::updateFps()
+void VisualizationFrameMod::updateFps()
 {
   frame_count_++;
   auto wall_diff = std::chrono::steady_clock::now() - last_fps_calc_time_;
@@ -198,53 +198,54 @@ void VisualizationFrame::updateFps()
   }
 }
 
-void VisualizationFrame::closeEvent(QCloseEvent * event)
+void VisualizationFrameMod::closeEvent(QCloseEvent * event)
 {
   if (prepareToExit()) {
+    frameCloseSignal(false);
     event->accept();
   } else {
     event->ignore();
   }
 }
 
-void VisualizationFrame::leaveEvent(QEvent * event)
+void VisualizationFrameMod::leaveEvent(QEvent * event)
 {
   Q_UNUSED(event);
   setStatus("");
 }
 
-void VisualizationFrame::reset()
+void VisualizationFrameMod::reset()
 {
   Ogre::MeshManager::getSingleton().removeAll();
   manager_->resetTime();
 }
 
 #if 0
-void VisualizationFrame::changeMaster()
+void VisualizationFrameMod::changeMaster()
 {
   if (prepareToExit()) {
     QApplication::exit(255);
   }
 }
 
-void VisualizationFrame::setShowChooseNewMaster(bool show)
+void VisualizationFrameMod::setShowChooseNewMaster(bool show)
 {
   show_choose_new_master_option_ = show;
 }
 #endif
 
-void VisualizationFrame::setHelpPath(const QString & help_path)
+void VisualizationFrameMod::setHelpPath(const QString & help_path)
 {
   help_path_ = help_path;
   manager_->setHelpPath(help_path_);
 }
 
-void VisualizationFrame::setSplashPath(const QString & splash_path)
+void VisualizationFrameMod::setSplashPath(const QString & splash_path)
 {
   splash_path_ = splash_path;
 }
 
-void VisualizationFrame::initialize(
+void VisualizationFrameMod::initialize(
   ros_integration::RosNodeAbstractionIface::WeakPtr rviz_ros_node,
   const QString & display_config_file)
 {
@@ -376,12 +377,12 @@ void VisualizationFrame::initialize(
 }
 
 VisualizationManager *
-VisualizationFrame::getManager()
+VisualizationFrameMod::getManager()
 {
   return manager_;
 }
 
-void VisualizationFrame::initConfigs()
+void VisualizationFrameMod::initConfigs()
 {
   home_dir_ = QDir::toNativeSeparators(QDir::homePath()).toStdString();
 
@@ -411,7 +412,7 @@ void VisualizationFrame::initConfigs()
   }
 }
 
-void VisualizationFrame::loadPersistentSettings()
+void VisualizationFrameMod::loadPersistentSettings()
 {
   YamlConfigReader reader;
   Config config;
@@ -438,7 +439,7 @@ void VisualizationFrame::loadPersistentSettings()
   }
 }
 
-void VisualizationFrame::savePersistentSettings()
+void VisualizationFrameMod::savePersistentSettings()
 {
   Config config;
   config.mapSetValue("Last Config Dir", QString::fromStdString(last_config_dir_));
@@ -456,7 +457,7 @@ void VisualizationFrame::savePersistentSettings()
   }
 }
 
-void VisualizationFrame::initMenus()
+void VisualizationFrameMod::initMenus()
 {
   file_menu_ = menuBar()->addMenu("&File");
 
@@ -508,7 +509,7 @@ void VisualizationFrame::initMenus()
   help_menu->addAction("&About", this, SLOT(onHelpAbout()));
 }
 
-void VisualizationFrame::initToolbars()
+void VisualizationFrameMod::initToolbars()
 {
   QFont font;
   font.setPointSize(font.pointSizeF() * 0.9);
@@ -544,7 +545,7 @@ void VisualizationFrame::initToolbars()
       onToolbarRemoveTool(QAction*)));
 }
 
-void VisualizationFrame::hideDockImpl(Qt::DockWidgetArea area, bool hide)
+void VisualizationFrameMod::hideDockImpl(Qt::DockWidgetArea area, bool hide)
 {
   QList<PanelDockWidget *> dock_widgets = findChildren<PanelDockWidget *>();
 
@@ -564,25 +565,25 @@ void VisualizationFrame::hideDockImpl(Qt::DockWidgetArea area, bool hide)
   }
 }
 
-void VisualizationFrame::setHideButtonVisibility(bool visible)
+void VisualizationFrameMod::setHideButtonVisibility(bool visible)
 {
   hide_left_dock_button_->setVisible(visible);
   hide_right_dock_button_->setVisible(visible);
 }
 
-void VisualizationFrame::hideLeftDock(bool hide)
+void VisualizationFrameMod::hideLeftDock(bool hide)
 {
   hideDockImpl(Qt::LeftDockWidgetArea, hide);
   hide_left_dock_button_->setArrowType(hide ? Qt::RightArrow : Qt::LeftArrow);
 }
 
-void VisualizationFrame::hideRightDock(bool hide)
+void VisualizationFrameMod::hideRightDock(bool hide)
 {
   hideDockImpl(Qt::RightDockWidgetArea, hide);
   hide_right_dock_button_->setArrowType(hide ? Qt::LeftArrow : Qt::RightArrow);
 }
 
-void VisualizationFrame::onDockPanelVisibilityChange(bool visible)
+void VisualizationFrameMod::onDockPanelVisibilityChange(bool visible)
 {
   // if a dock widget becomes visible and is resting inside the
   // left or right dock area, we want to unhide the whole area
@@ -600,7 +601,7 @@ void VisualizationFrame::onDockPanelVisibilityChange(bool visible)
   }
 }
 
-void VisualizationFrame::openNewPanelDialog()
+void VisualizationFrameMod::openNewPanelDialog()
 {
   QString class_id;
   QString display_name;
@@ -619,7 +620,7 @@ void VisualizationFrame::openNewPanelDialog()
   }
 }
 
-void VisualizationFrame::openNewToolDialog()
+void VisualizationFrameMod::openNewToolDialog()
 {
   QString class_id;
   QStringList empty;
@@ -637,7 +638,7 @@ void VisualizationFrame::openNewToolDialog()
   activateWindow();  // Force keyboard focus back on main window.
 }
 
-void VisualizationFrame::updateRecentConfigMenu()
+void VisualizationFrameMod::updateRecentConfigMenu()
 {
   recent_configs_menu_->clear();
 
@@ -664,7 +665,7 @@ void VisualizationFrame::updateRecentConfigMenu()
   }
 }
 
-void VisualizationFrame::markRecentConfig(const std::string & path)
+void VisualizationFrameMod::markRecentConfig(const std::string & path)
 {
   D_string::iterator it = std::find(recent_configs_.begin(), recent_configs_.end(), path);
   if (it != recent_configs_.end()) {
@@ -680,7 +681,7 @@ void VisualizationFrame::markRecentConfig(const std::string & path)
   updateRecentConfigMenu();
 }
 
-void VisualizationFrame::loadDisplayConfig(const QString & qpath)
+void VisualizationFrameMod::loadDisplayConfig(const QString & qpath)
 {
   std::string path = qpath.toStdString();
   QFileInfo path_info(qpath);
@@ -733,17 +734,17 @@ void VisualizationFrame::loadDisplayConfig(const QString & qpath)
   post_load_timer_->start(1000);
 }
 
-void VisualizationFrame::markLoadingDone()
+void VisualizationFrameMod::markLoadingDone()
 {
   loading_ = false;
 }
 
-void VisualizationFrame::setImageSaveDirectory(const QString & directory)
+void VisualizationFrameMod::setImageSaveDirectory(const QString & directory)
 {
   last_image_dir_ = directory.toStdString();
 }
 
-void VisualizationFrame::setDisplayConfigModified()
+void VisualizationFrameMod::setDisplayConfigModified()
 {
   if (!loading_) {
     if (!isWindowModified()) {
@@ -752,12 +753,12 @@ void VisualizationFrame::setDisplayConfigModified()
   }
 }
 
-void VisualizationFrame::setDisplayTitleFormat(const QString & title_format)
+void VisualizationFrameMod::setDisplayTitleFormat(const QString & title_format)
 {
   display_title_format_ = title_format.toStdString();
 }
 
-void VisualizationFrame::setDisplayConfigFile(const std::string & path)
+void VisualizationFrameMod::setDisplayConfigFile(const std::string & path)
 {
   display_config_file_ = path;
   std::string title;
@@ -792,7 +793,7 @@ void VisualizationFrame::setDisplayConfigFile(const std::string & path)
   setWindowTitle(QString::fromStdString(title));
 }
 
-bool VisualizationFrame::saveDisplayConfig(const QString & path)
+bool VisualizationFrameMod::saveDisplayConfig(const QString & path)
 {
   Config config;
   save(config);
@@ -811,26 +812,26 @@ bool VisualizationFrame::saveDisplayConfig(const QString & path)
   }
 }
 
-QString VisualizationFrame::getErrorMessage() const
+QString VisualizationFrameMod::getErrorMessage() const
 {
   return error_message_;
 }
 
-void VisualizationFrame::save(Config config)
+void VisualizationFrameMod::save(Config config)
 {
   manager_->save(config.mapMakeChild("Visualization Manager"));
   savePanels(config.mapMakeChild("Panels"));
   saveWindowGeometry(config.mapMakeChild("Window Geometry"));
 }
 
-void VisualizationFrame::load(const Config & config)
+void VisualizationFrameMod::load(const Config & config)
 {
   manager_->load(config.mapGetChild("Visualization Manager"));
   loadPanels(config.mapGetChild("Panels"));
   loadWindowGeometry(config.mapGetChild("Window Geometry"));
 }
 
-void VisualizationFrame::loadWindowGeometry(const Config & config)
+void VisualizationFrameMod::loadWindowGeometry(const Config & config)
 {
   int x, y;
   if (config.mapGetInt("X", &x) &&
@@ -873,7 +874,7 @@ void VisualizationFrame::loadWindowGeometry(const Config & config)
   hide_right_dock_button_->setChecked(b);
 }
 
-void VisualizationFrame::saveWindowGeometry(Config config)
+void VisualizationFrameMod::saveWindowGeometry(Config config)
 {
   config.mapSetValue("X", x());
   config.mapSetValue("Y", y());
@@ -896,7 +897,7 @@ void VisualizationFrame::saveWindowGeometry(Config config)
   }
 }
 
-void VisualizationFrame::loadPanels(const Config & config)
+void VisualizationFrameMod::loadPanels(const Config & config)
 {
   // First destroy any existing custom panels.
   for (int i = 0; i < custom_panels_.size(); i++) {
@@ -928,7 +929,7 @@ void VisualizationFrame::loadPanels(const Config & config)
   }
 }
 
-void VisualizationFrame::savePanels(Config config)
+void VisualizationFrameMod::savePanels(Config config)
 {
   // Not really necessary, but gives an empty list if there are no entries,
   // instead of an Empty config node.
@@ -939,7 +940,7 @@ void VisualizationFrame::savePanels(Config config)
   }
 }
 
-bool VisualizationFrame::prepareToExit()
+bool VisualizationFrameMod::prepareToExit()
 {
   if (!initialized_) {
     return true;
@@ -988,7 +989,7 @@ bool VisualizationFrame::prepareToExit()
   }
 }
 
-void VisualizationFrame::onOpen()
+void VisualizationFrameMod::onOpen()
 {
   QString filename = QFileDialog::getOpenFileName(
     this, "Choose a file to open",
@@ -1006,7 +1007,7 @@ void VisualizationFrame::onOpen()
   }
 }
 
-void VisualizationFrame::onSave()
+void VisualizationFrameMod::onSave()
 {
   if (!initialized_) {
     return;
@@ -1029,7 +1030,7 @@ void VisualizationFrame::onSave()
   }
 }
 
-void VisualizationFrame::onSaveAs()
+void VisualizationFrameMod::onSaveAs()
 {
   QString q_filename = QFileDialog::getSaveFileName(
     this, "Choose a file to save to",
@@ -1052,7 +1053,7 @@ void VisualizationFrame::onSaveAs()
   }
 }
 
-void VisualizationFrame::onSaveImage()
+void VisualizationFrameMod::onSaveImage()
 {
   ScreenshotDialog * dialog =
     new ScreenshotDialog(this, render_panel_, QString::fromStdString(last_image_dir_));
@@ -1062,7 +1063,7 @@ void VisualizationFrame::onSaveImage()
   dialog->show();
 }
 
-void VisualizationFrame::onRecentConfigSelected()
+void VisualizationFrameMod::onRecentConfigSelected()
 {
   QAction * action = dynamic_cast<QAction *>(sender());
   if (action) {
@@ -1079,7 +1080,7 @@ void VisualizationFrame::onRecentConfigSelected()
   }
 }
 
-void VisualizationFrame::addTool(Tool * tool)
+void VisualizationFrameMod::addTool(Tool * tool)
 {
   QAction * action = new QAction(tool->getName(), toolbar_actions_);
   action->setIcon(tool->getIcon());
@@ -1093,10 +1094,10 @@ void VisualizationFrame::addTool(Tool * tool)
 
   QObject::connect(
     tool, &Tool::nameChanged, this,
-    &VisualizationFrame::VisualizationFrame::onToolNameChanged);
+    &VisualizationFrameMod::VisualizationFrameMod::onToolNameChanged);
 }
 
-void VisualizationFrame::onToolNameChanged(const QString & name)
+void VisualizationFrameMod::onToolNameChanged(const QString & name)
 {
   // Early return if the tool is not present
   auto it = tool_to_action_map_.find(qobject_cast<Tool *>(sender()));
@@ -1108,7 +1109,7 @@ void VisualizationFrame::onToolNameChanged(const QString & name)
   it->second->setIconText(name);
 }
 
-void VisualizationFrame::onToolbarActionTriggered(QAction * action)
+void VisualizationFrameMod::onToolbarActionTriggered(QAction * action)
 {
   Tool * tool = action_to_tool_map_[action];
 
@@ -1117,7 +1118,7 @@ void VisualizationFrame::onToolbarActionTriggered(QAction * action)
   }
 }
 
-void VisualizationFrame::onToolbarRemoveTool(QAction * remove_tool_menu_action)
+void VisualizationFrameMod::onToolbarRemoveTool(QAction * remove_tool_menu_action)
 {
   QString name = remove_tool_menu_action->text();
   for (int i = 0; i < manager_->getToolManager()->numTools(); i++) {
@@ -1129,7 +1130,7 @@ void VisualizationFrame::onToolbarRemoveTool(QAction * remove_tool_menu_action)
   }
 }
 
-void VisualizationFrame::removeTool(Tool * tool)
+void VisualizationFrameMod::removeTool(Tool * tool)
 {
   QAction * action = tool_to_action_map_[tool];
   if (action) {
@@ -1149,14 +1150,14 @@ void VisualizationFrame::removeTool(Tool * tool)
   }
 }
 
-void VisualizationFrame::refreshTool(Tool * tool)
+void VisualizationFrameMod::refreshTool(Tool * tool)
 {
   QAction * action = tool_to_action_map_[tool];
   action->setIcon(tool->getIcon());
   action->setIconText(tool->getName());
 }
 
-void VisualizationFrame::indicateToolIsCurrent(Tool * tool)
+void VisualizationFrameMod::indicateToolIsCurrent(Tool * tool)
 {
   QAction * action = tool_to_action_map_[tool];
   if (action) {
@@ -1164,7 +1165,7 @@ void VisualizationFrame::indicateToolIsCurrent(Tool * tool)
   }
 }
 
-void VisualizationFrame::showHelpPanel()
+void VisualizationFrameMod::showHelpPanel()
 {
   if (!show_help_action_) {
     QDockWidget * dock = addPanelByName("Help", "rviz_common/Help");
@@ -1175,17 +1176,17 @@ void VisualizationFrame::showHelpPanel()
   }
 }
 
-void VisualizationFrame::onHelpDestroyed()
+void VisualizationFrameMod::onHelpDestroyed()
 {
   show_help_action_ = nullptr;
 }
 
-void VisualizationFrame::onHelpWiki()
+void VisualizationFrameMod::onHelpWiki()
 {
   QDesktopServices::openUrl(QUrl("http://www.ros.org/wiki/rviz"));
 }
 
-void VisualizationFrame::onHelpAbout()
+void VisualizationFrameMod::onHelpAbout()
 {
   QString about_text = QString(
     "This is RViz version %1 (%2).\n"
@@ -1205,12 +1206,12 @@ void VisualizationFrame::onHelpAbout()
   QMessageBox::about(QApplication::activeWindow(), "About", about_text);
 }
 
-QWidget * VisualizationFrame::getParentWindow()
+QWidget * VisualizationFrameMod::getParentWindow()
 {
   return this;
 }
 
-void VisualizationFrame::onDeletePanel()
+void VisualizationFrameMod::onDeletePanel()
 {
   // This should only be called as a SLOT from a QAction in the
   // "delete panel" submenu, so the sender will be one of the QActions
@@ -1235,7 +1236,7 @@ void VisualizationFrame::onDeletePanel()
   }
 }
 
-void VisualizationFrame::setFullScreen(bool full_screen)
+void VisualizationFrameMod::setFullScreen(bool full_screen)
 {
   auto state = windowState();
   if (full_screen == state.testFlag(Qt::WindowFullScreen)) {
@@ -1260,12 +1261,12 @@ void VisualizationFrame::setFullScreen(bool full_screen)
   show();
 }
 
-void VisualizationFrame::exitFullScreen()
+void VisualizationFrameMod::exitFullScreen()
 {
   setFullScreen(false);
 }
 
-QDockWidget * VisualizationFrame::addPanelByName(
+QDockWidget * VisualizationFrameMod::addPanelByName(
   const QString & name,
   const QString & class_id,
   Qt::DockWidgetArea area,
@@ -1294,12 +1295,14 @@ QDockWidget * VisualizationFrame::addPanelByName(
   return record.dock;
 }
 
-PanelDockWidget * VisualizationFrame::addPane(
+PanelDockWidget * VisualizationFrameMod::addPane(
   const QString & name, QWidget * panel,
   Qt::DockWidgetArea area, bool floating)
 {
   PanelDockWidget * dock;
   dock = new PanelDockWidget(name);
+  dock->setFeatures(QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetMovable);////setup Dock here
+  //setFeatures(QDockWidget::NoDockWidgetFeatures);
   dock->setContentWidget(panel);
   dock->setFloating(floating);
   dock->setObjectName(name);   // QMainWindow::saveState() needs objectName to be set.

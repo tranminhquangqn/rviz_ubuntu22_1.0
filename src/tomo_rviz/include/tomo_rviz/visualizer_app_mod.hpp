@@ -46,17 +46,17 @@ class QTimer;
 namespace rviz_common
 {
 
-class VisualizationFrame;
+class VisualizationFrameMod;
 
-class VisualizerApp : public QObject
+class VisualizerAppMod : public QObject
 {
   Q_OBJECT
 
 public:
-  explicit VisualizerApp(
+  explicit VisualizerAppMod(
     std::unique_ptr<rviz_common::ros_integration::RosClientAbstractionIface> ros_client_abstraction
   );
-  ~VisualizerApp() override;
+  ~VisualizerAppMod() override;
 
   void setApp(QApplication * app);
 
@@ -70,7 +70,7 @@ public:
    */
   bool init(int argc, char ** argv);
 
-  VisualizationFrame * getFrame(){
+  VisualizationFrameMod * getFrame(){
     return frame_;
   }
 
@@ -83,7 +83,7 @@ private:
 
   QApplication * app_;
   QTimer * continue_timer_;
-  VisualizationFrame * frame_;
+  VisualizationFrameMod * frame_;
   rviz_common::ros_integration::RosNodeAbstractionIface::WeakPtr node_;
   std::unique_ptr<rviz_common::ros_integration::RosClientAbstractionIface> ros_client_abstraction_;
 };

@@ -28,7 +28,7 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include "rviz_common/visualizer_app.hpp"
+#include "tomo_rviz/visualizer_app_mod.hpp"
 
 #include <iostream>
 #include <memory>
@@ -47,13 +47,13 @@
 #include "rviz_common/logging.hpp"
 #include "rviz_rendering/ogre_logging.hpp"
 
-#include "rviz_common/visualization_frame.hpp"
+#include "tomo_rviz/visualization_frame_mod.hpp"
 #include "rviz_common/visualization_manager.hpp"
 
 namespace rviz_common
 {
 
-VisualizerApp::VisualizerApp(
+VisualizerAppMod::VisualizerAppMod(
   std::unique_ptr<rviz_common::ros_integration::RosClientAbstractionIface> ros_client_abstraction)
 : app_(0),
   continue_timer_(0),
@@ -62,22 +62,22 @@ VisualizerApp::VisualizerApp(
   ros_client_abstraction_(std::move(ros_client_abstraction))
 {}
 
-void VisualizerApp::setApp(QApplication * app)
+void VisualizerAppMod::setApp(QApplication * app)
 {
   app_ = app;
 }
 
-rviz_rendering::RenderWindow * VisualizerApp::getRenderWindow()
+rviz_rendering::RenderWindow * VisualizerAppMod::getRenderWindow()
 {
   return frame_->getRenderWindow();
 }
 
-void VisualizerApp::loadConfig(QString config_path)
+void VisualizerAppMod::loadConfig(QString config_path)
 {
   frame_->loadDisplayConfig(config_path);
 }
 
-bool VisualizerApp::init(int argc, char ** argv)
+bool VisualizerAppMod::init(int argc, char ** argv)
 {
   rviz_common::install_rviz_rendering_log_handlers();
 
@@ -143,7 +143,7 @@ bool VisualizerApp::init(int argc, char ** argv)
 
   node_ = ros_client_abstraction_->init(argc, argv, "rviz", false /* anonymous_name */);
 
-  frame_ = new VisualizationFrame(node_);
+  frame_ = new VisualizationFrameMod(node_);
 
   frame_->setDisplayTitleFormat(display_title_format);
 
@@ -167,21 +167,21 @@ bool VisualizerApp::init(int argc, char ** argv)
   return true;
 }
 
-VisualizerApp::~VisualizerApp()
+VisualizerAppMod::~VisualizerAppMod()
 {
   delete continue_timer_;
   ros_client_abstraction_->shutdown();
   delete frame_;
 }
 
-void VisualizerApp::startContinueChecker()
+void VisualizerAppMod::startContinueChecker()
 {
   continue_timer_ = new QTimer(this);
   connect(continue_timer_, SIGNAL(timeout()), this, SLOT(checkContinue()));
   continue_timer_->start(100);
 }
 
-void VisualizerApp::checkContinue()
+void VisualizerAppMod::checkContinue()
 {
   if (!ros_client_abstraction_->ok()) {
     if (frame_) {

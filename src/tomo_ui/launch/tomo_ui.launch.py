@@ -40,10 +40,10 @@ def generate_launch_description():
                 executable="tomo_ui",
                 name="tomo_ui",
                 output="log",
-                arguments=["-d", os.path.expanduser("~/tomo_config/tomo" + descArg + "_moveit.rviz")],
-                parameters=[
-                        robotDescKinematics
-                ],
+                # arguments=["-d", os.path.expanduser("~/tomo_config/tomo" + descArg + "_moveit.rviz")],
+                # parameters=[
+                #         robotDescKinematics
+                # ],
             )
         ]
     )

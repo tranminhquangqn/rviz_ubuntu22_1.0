@@ -10,10 +10,11 @@ import QtQuick.Layouts 1.3
 Rectangle{
     id: rvizFrame
     color:"green";
+    // visible: rvizLoader.configVisible
     Component.onCompleted:{
         rvizLoader.initRvizApp(rvizFrame,mainWindow)
     }
-    onVisibleChanged:{
+        onVisibleChanged:{
         if(visible){
         rvizLoader.showRviz()
         }else{

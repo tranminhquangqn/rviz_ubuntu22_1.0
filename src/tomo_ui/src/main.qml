@@ -22,6 +22,11 @@ ApplicationWindow {
     // visibility: Window.Hidden
 
     visible: true
+    onVisibleChanged:{
+        if(visible){
+            mainWindow.showFullScreen()
+        }
+    }
 
     color: "#303030"
     onClosing: {
@@ -37,13 +42,13 @@ ApplicationWindow {
     }
     Button{
         anchors.bottom:parent.bottom
-        ToolTip{
-            text:"ALOOOOOOOO"
-            visible:parent.hovered
-        }    
+        text: rvizLoader.configVisible?"Hide":"Show"
         onClicked:{
-            rvizFrame.visible=!rvizFrame.visible
+            if(rvizLoader.configVisible){
+                rvizLoader.hideRviz()
+            }else{
+                rvizLoader.showRviz()
+            }
         }
     }
-
 }

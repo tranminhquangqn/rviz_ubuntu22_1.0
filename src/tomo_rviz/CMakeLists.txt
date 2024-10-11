@@ -38,8 +38,8 @@ set(CMAKE_AUTOMOC_COMPILER_PREDEFINES OFF)
 set(QT_LIBRARIES Qt5::Widgets Qt5::Core Qt5::Quick Qt5::Concurrent Qt5::OpenGL)
 
 set(tomo_rviz_headers_to_moc
-  include/tomo_rviz/visualizer_app.hpp
-  include/tomo_rviz/visualization_frame.hpp
+  include/tomo_rviz/visualizer_app_mod.hpp
+  include/tomo_rviz/visualization_frame_mod.hpp
   # include/tomo_rviz/panel_factory.hpp
   # include/tomo_rviz/panel_dock_widget.hpp
   # include/tomo_rviz/render_panel.hpp
@@ -73,8 +73,8 @@ endforeach()
 set(tomo_rviz_source_files
   # src/ros_integration/ros_node_abstraction.cpp
   # src/ros_integration/ros_client_abstraction.cpp
-  src/visualizer_app.cpp
-  src/visualization_frame.cpp
+  src/visualizer_app_mod.cpp
+  src/visualization_frame_mod.cpp
   # src/panel_factory.cpp
   # src/panel_dock_widget.cpp
   # src/displays_panel.cpp
@@ -119,9 +119,9 @@ install(
 )
 
 
-install(FILES moveit.rviz
-  DESTINATION share/${PROJECT_NAME}
-)
+# install(FILES moveit.rviz
+#   DESTINATION share/${PROJECT_NAME}
+# )
 
 # install(
 #   DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/icons"
