@@ -9,6 +9,7 @@
 #include <QPoint>
 
 #include <QWheelEvent>
+#include <QDebug>
 
 class WidgetItem2 : public QQuickPaintedItem
 {
@@ -19,6 +20,8 @@ public:
     ~WidgetItem2();
 
     void setWidget(QWidget* widget);
+    Q_INVOKABLE void setItem();
+    
 
     void paint(QPainter* painter) override;
 

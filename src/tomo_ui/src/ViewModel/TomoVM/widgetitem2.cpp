@@ -19,7 +19,9 @@ WidgetItem2::WidgetItem2(QQuickItem *parent) : QQuickPaintedItem(parent)
 WidgetItem2::~WidgetItem2(){
     delete m_timer;
 }
-
+void WidgetItem2::setItem(){
+    qDebug()<<"setItem";
+}
 void WidgetItem2::setWidget(QWidget *widget)
 {
 

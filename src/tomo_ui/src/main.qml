@@ -6,36 +6,44 @@ import QtGraphicalEffects 1.0
 import QtQuick.Layouts 1.3
 
 //end
-
-import WidgetItem 1.0
+import "View/TomoView"
 
 ApplicationWindow {
     id: mainWindow
 
-    x: 0
-    y: 0
-    width: 1920
-    height: 1080
-    minimumHeight: 1080
-    minimumWidth: 1920
+    // x: 0
+    // y: 0
+    width: 1000
+    height: 800
+    // minimumHeight: 1080
+    // minimumWidth: 1920
     title: qsTr("TomO SPC v4.0.0")
-    flags: Qt.FramelessWindowHint
+    // flags: Qt.FramelessWindowHint
     // visibility: Window.Hidden
 
     visible: true
 
     color: "#303030"
-
-    WidgetItem{
-        width:500
-        height:500
-        // Rectangle{
-        //     anchors.fill:parent
-        //     color:"red"
-        // }
-        
+    onClosing: {
+        close.accepted = false
+        rvizLoader.closeRviz()
+        close.accepted = true
     }
 
-
+    RvizFrame{
+        id:rvizFrame
+        width:parent.width*0.8
+        height:parent.height*0.8
+    }
+    Button{
+        anchors.bottom:parent.bottom
+        ToolTip{
+            text:"ALOOOOOOOO"
+            visible:parent.hovered
+        }    
+        onClicked:{
+            rvizFrame.visible=!rvizFrame.visible
+        }
+    }
 
 }

@@ -20,6 +20,10 @@
   <depend>tomo_camera</depend>
   <depend>tomo_rviz</depend>
   <depend>rviz_visual_tools</depend>
+  <depend>rviz2</depend>
+  <depend>rviz_common</depend>
+  <depend>rviz_rendering</depend>
+
 
   <exec_depend>ros2launch</exec_depend>
   <exec_depend>libqt5-core</exec_depend>

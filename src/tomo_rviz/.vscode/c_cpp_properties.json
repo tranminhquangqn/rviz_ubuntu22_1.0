@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/tomo/ws_ui2/install/tomo_peripherals/include/**",
+        "/home/tomo/ws_ui2/install/tomo_comm/include/**",
+        "/home/tomo/ws_ui2/install/tomo_msgs/include/**",
+        "/home/tomo/ws_ui2/install/tomo_camera/include/**",
+        "/home/tomo/ws_ui2/install/tomo_action/include/**",
+        "/opt/ros/galactic/include/**",
+        "/home/tomo/ws_ui2/src/tomo_camera/include/**",
+        "/home/tomo/ws_ui2/src/tomo_comm/include/**",
+        "/home/tomo/ws_ui2/src/tomo_rviz/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -26,16 +26,24 @@
 // #include "rviz/visualizer_app_mod.h"
 // #include <rviz/window_manager_interface.h>
 
+
+#include "widgetitem2.h"
+#include "rclcpp/rclcpp.hpp"
+#include "rviz_common/logging.hpp"
+#include "rviz_common/ros_integration/ros_client_abstraction.hpp"
+
+#include "tomo_rviz/visualizer_app.hpp"
+#include "tomo_rviz/visualization_frame.hpp"
+
 class RvizVM : public QObject
 {
 	Q_OBJECT
 	Q_PROPERTY(bool configVisible READ getConfigVisible WRITE setConfigVisible NOTIFY configVisibleChanged)
 	Q_PROPERTY(bool isInit READ getIsInit NOTIFY isInitChanged)
-	Q_PROPERTY(bool isTempHide READ getIsTempHide)
 public:
 	// rviz::VisualizationManager* m_manager;
-	RvizVM(int& argc, char** argv, QApplication* qapp, QObject* parent)
-		: QObject(parent), m_qapp(qapp), m_argc(argc), m_argv(argv), m_configVisible(false), m_isInit(false), m_isTempHide(false)
+	RvizVM(int& argc, std::vector<char *> argv, QApplication* qapp, QObject* parent)
+		: QObject(parent), m_qapp(qapp), m_argc(argc), m_argv(argv), m_configVisible(false), m_isInit(false)
 	{
 	}
 	~RvizVM()
@@ -56,44 +64,53 @@ public:
 	{
 		return m_isInit;
 	}
-	bool getIsTempHide()
-	{
-		return m_isTempHide;
+	Q_INVOKABLE void viewDisplay(WidgetItem2* widgetPanel){
+	    widgetPanel->setWidget(m_frame);
 	}
-	// Q_INVOKABLE void viewDisplay(WidgetItem2* widgetPanel){
-	//     widgetPanel->setWidget(m_frame);
-	// }
-	Q_INVOKABLE void initRvizApp(rviz::QtQuickOgreRenderWindow* renderWindow, QQuickItem* rvizFrame,QQuickItem* renderPanel)
+	Q_INVOKABLE void initRvizApp(QQuickItem* rvizFrame,QQuickWindow* mainWindow)
 	{
-		rviz_common::VisualizerApp* widgetRviz = new rviz_common::VisualizerApp();
+		rviz_common::VisualizerApp* widgetRviz = new rviz_common::VisualizerApp(
+   				 std::make_unique<rviz_common::ros_integration::RosClientAbstraction>());
 		widgetRviz->setApp(m_qapp);
-		widgetRviz->init(m_argc, m_argv, renderWindow, source_);
-		m_frame = widgetRviz->frame_;
-		m_vman	= m_frame->getManager();
-		connect(m_frame, SIGNAL(frameCloseSignal(bool)), this, SLOT(setConfigVisible(bool)));
-		connect(m_qapp, &QApplication::focusWindowChanged, this, &RvizVM::onFocusWindowChanged);
-		m_rvizFrame = rvizFrame;
-		m_renderPanel = renderPanel;
+		widgetRviz->init(m_argc, m_argv.data());
+		m_frame = widgetRviz->getFrame();
+		m_frame->setWindowFlags(Qt::Dialog|Qt::WindowStaysOnTopHint|Qt::FramelessWindowHint);
 
-		// QObject::connect(m_rvizFrame, &QQuickItem::visibleChanged, [=]() {
-		//     QPointF globalPosition = m_rvizFrame->mapToGlobal(QPointF(0, 0));
-		// 	m_frame->move(globalPosition.x(), globalPosition.y());
-		//	m_frame->resize(m_rvizFrame->width(), m_rvizFrame->height());
-		// // });
+		// m_frame->show();
+		// m_vman	= m_frame->getManager();
+		// connect(m_frame, SIGNAL(frameCloseSignal(bool)), this, SLOT(setConfigVisible(bool)));
+		m_rvizFrame = rvizFrame;
+		m_mainWindow = mainWindow;
+	
+		QObject::connect(m_rvizFrame, &QQuickItem::widthChanged, [=]() {
+		    setRvizGeometry();
+		});
+		QObject::connect(m_rvizFrame, &QQuickItem::heightChanged, [=]() {
+		    setRvizGeometry();
+		});
+		QObject::connect(m_mainWindow, &QQuickWindow::xChanged, [=]() {
+		    setRvizGeometry();
+		});
+		QObject::connect(m_mainWindow, &QQuickWindow::yChanged, [=]() {
+		    setRvizGeometry();
+		});
 		m_isInit = true;
 		Q_EMIT isInitChanged();
+		if(m_rvizFrame->isVisible()){
+			showRviz();
+		}
 	}
-	// Q_INVOKABLE void setRvizGeometry()
-	// {
-	// 	if(!m_isInit) {
-	// 		return;
-	// 	}
-	// 	QPointF globalPosition = m_rvizFrame->mapToGlobal(QPointF(0, 0));
-	// 	m_frame->setGeometry(globalPosition.x()
-	// 					,globalPosition.y()
-	// 					,m_rvizFrame->width()
-	// 					,m_rvizFrame->height());
-	// }
+	Q_INVOKABLE void setRvizGeometry()
+	{
+		if(!m_isInit) {
+			return;
+		}
+		QPointF globalPosition = m_rvizFrame->mapToGlobal(QPointF(0, 0));
+		m_frame->setGeometry(globalPosition.x()
+						,globalPosition.y()
+						,m_rvizFrame->width()
+						,m_rvizFrame->height());
+	}
 	// Q_INVOKABLE void resetRviz()
 	// {
 	// 	if(!m_isInit) {
@@ -113,53 +130,31 @@ public Q_SLOTS:
 			Q_EMIT configVisibleChanged();
 		}
 	}
-    // void onFocusWindowChanged(QWindow* newWindow)
-    // {
-	// 	if(!m_isInit){
-	// 		return;
-	// 	}
-	// 	if (!newWindow) {
-	// 		hideRviz();
-	// 	}
-    // }
-
-	// void showRviz()
-	// {
-	// 	if(!m_isInit) {
-	// 		return;
-	// 	}
-	// 	setRvizGeometry();
-	// 	// m_frame->setFixedSize(m_frame->size());
-	// 	m_frame->show();
-	// 	setConfigVisible(true);
-	// 	m_isTempHide=false;
-	// }
-	// void hideRviz()
-	// {
-	// 	if(!m_isInit) {
-	// 		return;
-	// 	}
-	// 	m_frame->hide();
-	// 	setConfigVisible(false);
-	// }
-	// void closeRviz()
-	// {
-	// 	if(!m_isInit) {
-	// 		return;
-	// 	}
-	// 	m_frame->close();
-	// }
-	// void tempHideRviz()
-	// {
-	// 	hideRviz();
-	// 	m_isTempHide=true;
-	// }
-	// void checkReShowRviz()
-	// {
-	// 	if(m_isTempHide && m_renderPanel->isVisible()){
-	// 		showRviz();
-	// 	}
-	// }
+	void showRviz()
+	{
+		if(!m_isInit) {
+			return;
+		}
+		setRvizGeometry();
+		// m_frame->setFixedSize(m_frame->size());
+		m_frame->show();
+		setConfigVisible(true);
+	}
+	void hideRviz()
+	{
+		if(!m_isInit) {
+			return;
+		}
+		m_frame->hide();
+		setConfigVisible(false);
+	}
+	void closeRviz()
+	{
+		if(!m_isInit) {
+			return;
+		}
+		m_frame->close();
+	}
 Q_SIGNALS:
 	void configVisibleChanged();
 	void isInitChanged();
@@ -167,18 +162,17 @@ Q_SIGNALS:
 private:
 	QWidget* widgetWindow				= nullptr;
 	QQuickItem* m_rvizFrame				= nullptr;
-	QQuickItem* m_renderPanel			= nullptr;
+	QQuickWindow* m_mainWindow			= nullptr;
 	// rviz::DisplaysPanel* displays_panel = nullptr;
 
-	// rviz::VisualizationManager* m_vman	 = nullptr;
-	// rviz::VisualizationFrameMod* m_frame = nullptr;
-	// rviz::VisualizerAppMod* widgetRviz	 = nullptr;
+	// rviz_common::VisualizationManager* m_vman	 = nullptr;
+	rviz_common::VisualizationFrame* m_frame = nullptr;
+	// rviz_common::VisualizerAppMod* widgetRviz	 = nullptr;
 	QApplication* m_qapp;
 	int m_argc;
-	char** m_argv;
+	std::vector<char *> m_argv;
 	bool m_configVisible;
 	bool m_isInit;
-	bool m_isTempHide;
 
 	int rvizConfigWid = 1100;
 	int rvizConfigHei = 410;

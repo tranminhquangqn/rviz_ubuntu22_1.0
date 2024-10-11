@@ -44,7 +44,7 @@ find_package(diagnostic_msgs REQUIRED)
 # find_package(tomo_msgs REQUIRED)
 # find_package(tomo_comm REQUIRED)
 # find_package(tomo_camera REQUIRED)
-# find_package(tomo_rviz REQUIRED)
+find_package(tomo_rviz REQUIRED)
 find_package(rviz2 REQUIRED)
 find_package(rviz_common REQUIRED)
 find_package(rviz_rendering REQUIRED)
@@ -88,7 +88,7 @@ set(THIS_PACKAGE_INCLUDE_DEPENDS
 	# tomo_action
 	# tomo_msgs
 	# tomo_camera
-	# tomo_rviz
+	tomo_rviz
   rviz2
   rviz_common
   rviz_rendering
@@ -107,7 +107,7 @@ set(THIS_PACKAGE_INCLUDE_DIRS
 	# ${tomo_comm_INCLUDE_DIRS}
 	# ${tomo_action_INCLUDE_DIRS}
 	# ${tomo_camera_INCLUDE_DIRS}
-	# ${tomo_rviz_INCLUDE_DIRS}
+	${tomo_rviz_INCLUDE_DIRS}
   ${rviz2_INCLUDE_DIRS}
   ${rviz_common_INCLUDE_DIRS}
   ${rviz_rendering_INCLUDE_DIRS}

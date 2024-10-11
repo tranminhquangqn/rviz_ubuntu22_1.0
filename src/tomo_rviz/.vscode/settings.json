@@ -1,0 +1,13 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/tomo/ws_ui2/install/tomo_msgs/lib/python3.8/site-packages",
+        "/home/tomo/ws_ui2/install/tomo_action/lib/python3.8/site-packages",
+        "/opt/ros/galactic/lib/python3.8/site-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/tomo/ws_ui2/install/tomo_msgs/lib/python3.8/site-packages",
+        "/home/tomo/ws_ui2/install/tomo_action/lib/python3.8/site-packages",
+        "/opt/ros/galactic/lib/python3.8/site-packages"
+    ],
+    "cmake.configureOnOpen": false
+}
