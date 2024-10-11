@@ -22,11 +22,11 @@ ApplicationWindow {
     // visibility: Window.Hidden
 
     visible: true
-    onVisibleChanged:{
-        if(visible){
-            mainWindow.showFullScreen()
-        }
-    }
+    // onVisibleChanged:{
+    //     if(visible){
+    //         mainWindow.showFullScreen()
+    //     }
+    // }
 
     color: "#303030"
     onClosing: {

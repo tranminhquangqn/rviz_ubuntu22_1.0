@@ -17,17 +17,6 @@
 #include <QWidget>
 #include <QWidgetItem>
 
-// #include "rviz/displays_panel.h"
-// #include "rviz/visualization_manager.h"
-
-// #include "rviz/ogre_helpers/qt_quick_ogre_render_window.h"
-// #include "rviz/quick_visualization_frame.h"
-// #include "rviz/visualization_frame_mod.h"
-// #include "rviz/visualizer_app_mod.h"
-// #include <rviz/window_manager_interface.h>
-
-
-#include "widgetitem2.h"
 #include "rclcpp/rclcpp.hpp"
 #include "rviz_common/logging.hpp"
 #include "rviz_common/ros_integration/ros_client_abstraction.hpp"
@@ -52,19 +41,17 @@ public:
 		m_frame = widgetRviz->getFrame();
 		m_frame->setWindowFlags(Qt::Tool|Qt::FramelessWindowHint);
 
-		// m_frame->show();
-		// m_vman	= m_frame->getManager();
 		connect(m_frame, SIGNAL(frameCloseSignal(bool)), this, SLOT(setConfigVisible(bool)));
 	}
 	~RvizVM()
 	{
-		// if(widgetRviz != nullptr) {
-		// 	delete widgetRviz;
-		// 	widgetRviz = nullptr;
-		// }
-		// if(m_frame) {
-		// 	m_frame->close();
-		// }
+		if(widgetRviz != nullptr) {
+			delete widgetRviz;
+			widgetRviz = nullptr;
+		}
+		if(m_frame) {
+			m_frame->close();
+		}
 	}
 	bool getConfigVisible()
 	{
@@ -73,9 +60,6 @@ public:
 	bool getIsInit()
 	{
 		return m_isInit;
-	}
-	Q_INVOKABLE void viewDisplay(WidgetItem2* widgetPanel){
-	    widgetPanel->setWidget(m_frame);
 	}
 	Q_INVOKABLE void initRvizApp(QQuickItem* rvizFrame,QQuickWindow* mainWindow)
 	{
@@ -164,11 +148,11 @@ private:
 	QWidget* widgetWindow				= nullptr;
 	QQuickItem* m_rvizFrame				= nullptr;
 	QQuickWindow* m_mainWindow			= nullptr;
-	// rviz::DisplaysPanel* displays_panel = nullptr;
 
 	// rviz_common::VisualizationManager* m_vman	 = nullptr;
 	rviz_common::VisualizationFrameMod* m_frame = nullptr;
-	// rviz_common::VisualizerAppMod* widgetRviz	 = nullptr;
+	rviz_common::VisualizerAppMod* widgetRviz	= nullptr;
+
 	QApplication* m_qapp;
 	int m_argc;
 	std::vector<char *> m_argv;
