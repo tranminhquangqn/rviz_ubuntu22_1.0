@@ -34,7 +34,7 @@ public:
 	RvizVM(int& argc, std::vector<char *> argv, QApplication* qapp, QObject* parent)
 		: QObject(parent), m_qapp(qapp), m_argc(argc), m_argv(argv), m_configVisible(false), m_isInit(false)
 	{
-		rviz_common::VisualizerAppMod* widgetRviz = new rviz_common::VisualizerAppMod(
+		widgetRviz = new rviz_common::VisualizerAppMod(
 			std::make_unique<rviz_common::ros_integration::RosClientAbstraction>());
 		widgetRviz->setApp(m_qapp);
 		widgetRviz->init(m_argc, m_argv.data());
@@ -155,13 +155,10 @@ private:
 
 	QApplication* m_qapp;
 	int m_argc;
-	std::vector<char *> m_argv;
+	std::vector<char *> m_argv = {};
 	bool m_configVisible;
 	bool m_isInit;
-
-	int rvizConfigWid = 1100;
-	int rvizConfigHei = 410;
-
+	
 	std::string source_ = getenv("HOME") + std::string("/tomo_config/rviz/tomo_moveit.rviz");
 };
 #endif
